@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioAdvanced</title>
+
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- END BOX ICONS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+    <!-- JAVA TESTE -->
+
+    <!-- END JAVA TESTE -->
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Portifolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active scroll">Home</a>
+            <a href="#about" class="scroll">Sobre</a>
+            <a href="#services" class="scroll">Servicos</a>
+            <a href="#portfolio" class="scroll">Portfolio</a>
+            <a href="#contact" class="scroll">Contato</a>
+            <a href="#projetos" class="scroll">Projetos</a>
+
+        </nav>
+
+       
+        <!-- teste -->
+
+
+        <!-- end TEST BOX -->
+        <script>
+            const scrollLinks = document.querySelectorAll('.scroll');
+
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetPosition = document.querySelector(targetId).offsetTop;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 1000;
+                    let start = null;
+
+                    window.requestAnimationFrame(step);
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                        if (progress < duration) window.requestAnimationFrame(step);
+                    }
+                });
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            };
+        </script>
+    </header>
+
+    <!-- Home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Livio Ribeiro</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat doloribus esse fugiat, fuga temporibus
+                totam possimus commodi incidunt dignissimos.
+            </p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="imagens/lilicsIAs.jpg" />
+        </div>
+
+    </section>
+    <!-- Section de DESIGN -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="imagens/LILIWIX.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores atque repellendus fuga harum
+                unde. Eveniet incidunt vitae magnam est mollitia culpa distinctio, natus possimus dolorem non, et eum
+                repellat.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+
+    </section>
+    <!-- end Section de DESIGN -->
+
+    <!-- SEÇÃO DE SERVIÇOS -->
+    <section class="services" id="services">
+        <h2 class="heading"> Our <span>Services</span></h2>
+        <!-- BLOCO 1 -->
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit omnis modi laudantium natus
+                    officia, culpa magni dicta soluta ab.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <!-- BLOCO 2 -->
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3>Graphic Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit omnis modi laudantium natus
+                    officia, culpa magni dicta soluta ab.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <!-- BLOCO 3 -->
+            <div class="services-box">
+                <i class='bx bx-bar-chart-alt'></i>
+                <h3>Digital Marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugit omnis modi laudantium natus
+                    officia, culpa magni dicta soluta ab.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- EDN SEÇÃO DE SERVICOS -->
+    <!-- SECAO PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Project</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="6.jpg" alt="">
+                <div class="portfolio1-layer">
+                    <h4>Web Desig</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <!-- BOX 2 -->
+            <div class="portfolio-box">
+                <img src="1.jpg" alt="">
+                <div class="portfolio1-layer">
+                    <h4>Web Desig</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <!-- BOX 3 -->
+            <div class="portfolio-box">
+                <img src="2.jpg" alt="">
+                <div class="portfolio1-layer">
+                    <h4>Web Desig</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <!-- BOX 4-->
+            <div class="portfolio-box">
+                <img src="3.jpg" alt="">
+                <div class="portfolio1-layer">
+                    <h4>Web Desig</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <!-- BOX 5 -->
+            <div class="portfolio-box">
+                <img src="4.jpg" alt="">
+                <div class="portfolio1-layer">
+                    <h4>Web Desig</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+            <!-- BOX 6 -->
+            <div class="portfolio-box">
+                <img src="5.jpg" alt="">
+                <div class="portfolio1-layer">
+                    <h4>Web Desig</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SECAO PORFOLIO -->
+    <!-- SECAO CONTATO -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Mobile NUmber">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10">Your Message</textarea>
+            <input type="submit" value="Send Message" class="btn">
+
+        </form>
+
+    </section>
+    <!-- END SECAO CONTATO -->
+    <section class="projetos" id="projetos">
+        <div class="projects">
+            <h2 class="heading"> <span>My</span> Projects</h2>
+        </div>
+
+        <div class="slider">
+            <div class="slides">
+              <!-- radio Buttons -->
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+              <input type="radio" name="radio-btn" id="radio4">
+              <!-- END radio Buttons -->
+          
+              <!-- SLIDES IMAGES -->
+              <div class="slide first">
+                <img src="im1.jpg" alt="imagem 1">
+              </div>
+          
+              <div class="slide">
+                <img src="img2.jpg" alt="imagem 2">
+              </div>
+              <div class="slide">
+                <img src="img3.jpg" alt="imagem 3">
+              </div>
+              <div class="slide">
+                <img src="img4.jpg" alt="imagem 4">
+              </div>
+              <!-- END SLIDE IMAGES -->
+          
+              <!-- NAVEGATION AUTO -->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+              <!-- END NAVEGATION AUTO -->
+          
+              <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+              </div>
+              
+          
+            </div>
+          </div>
+          
+    </section>
+    <!-- SLIDE SHOW TEST -->
+    <!-- BUTTON LINKS -->
+    <section>
+
+    </section>
+    <!-- END BUTTON LINKS -->
+    <!-- END SLIDE SHOW TEST -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by codehal | All Rights Reserved. </p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home" class="active scroll"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const scrollLinks = document.querySelectorAll('.scroll');
+
+                scrollLinks.forEach(link => {
+                    link.addEventListener('click', e => {
+                        e.preventDefault();
+
+                        const targetId = link.getAttribute('href');
+                        const targetPosition = document.querySelector(targetId).offsetTop;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+                        const duration = 1000;
+                        let start = null;
+
+                        window.requestAnimationFrame(step);
+
+                        function step(timestamp) {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+                            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                            if (progress < duration) window.requestAnimationFrame(step);
+                        }
+                    });
+                });
+
+                function easeInOutCubic(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t * t + b;
+                    t -= 2;
+                    return c / 2 * (t * t * t + 2) + b;
+                }
+            });
+        </script>
+    </footer>
+    </footer>
+
+    <!-- END FOOTER -->
+
+    <!-- scrip novo -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- end scrip novo -->
+
+    <!-- script novo2 -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <!-- script novo2 -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
