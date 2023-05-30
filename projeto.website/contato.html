@@ -1,0 +1,130 @@
+A
+<!DOCTYPE html>
+<html lang="pt-br">
+
+R
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome-->
+    <title>Contato</title>
+    <div>
+        <link rel="stylesheet" href="css/style.css">
+    </div>
+
+</head>
+
+<body>
+    <!-- header-->
+    <header style="background-image: url('img/background-contacto.jpg')">
+        <!-- container-->
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <ul class="ul open">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="servicos.html">Serviços</a>
+                    <a class="btn animate-btn" href="contato.html">Contato</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa fa-bars"></i>
+
+                </div>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Nos contacte</h1>
+                    <p>Entre em contato com nosso time e eles te retornarão em tempo record, para tirar seu projeto do
+                        papel</p>
+                </div>
+            </section>
+        </div>
+        <!-- end container-->
+    </header>
+    <!-- end header-->
+    <section class="contato">
+        <div class="container">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248928.46284843818!2d-38.641887284976804!3d-12.875072274809638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716037ca23ca5b3%3A0x1b9fc7912c226698!2sSalvador%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1680090818666!5m2!1spt-BR!2sbr"
+                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" margin="20px 0"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contato-info">
+                    <div class="left-size">
+                        <div>
+                            <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                            <p>Salvador/BA-Cabula Cep-41.180.443</p>
+                        </div>
+                        <div>
+                            <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                            <p>liviormr@hotmail.com</p>
+                        </div>
+                        <div>
+                            <a href=""><i class="fa fa-phone" aria-hidden="true"></i></a>
+                            <p>+55 71 99999-9090</p>
+                        </div>
+                        <div>
+                            <a href=""><i class="fa fa-phone" aria-hidden="true"></i></a>
+                            <p>+55 71 99999-8080</p>
+                        </div>
+                    </div>
+                    <div class="right-size">
+                       <form action="">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="text" placeholder="Assunto" required>
+                       <textarea name="" id="" cols="30" rows="10" placeholder="Sua mensagem" required></textarea>
+                       <button class="btn animate-btn">Enviar Mensagem</button>
+
+
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- FOOTER TEST-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/seu_facebook"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/seu_instagram"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/seu_linkedin"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li><a href="https://www.github.com/seu_github"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="desenvolvedor">
+                <p>Desenvolvido por Livio Rebouças</p>
+            </div>
+        </footer>
+        <!--END FOOTER TEST-->
+        <section>
+            <script src="js/main.js"></script>
+            <script type="text/javascript" src="main.js"></script>
+            <script>
+                VanillaTilt.init(document.querySelectorAll(".row-cards-item"));
+            </script>
+        </section>
+
+</body>
+
+</html>
