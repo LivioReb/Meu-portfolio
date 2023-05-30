@@ -44,4 +44,10 @@ function runTyped() {
 runTyped();
 
 /* SLIDE SHOW TEST=============================================*/
+document.getElementById("menu-icon").addEventListener("click", function() {
+  document.querySelector(".navbar").classList.add("active");
+});
 
+document.querySelector(".close-menu").addEventListener("click", function() {
+  document.querySelector(".navbar").classList.remove("active");
+});

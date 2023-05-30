@@ -109,11 +109,7 @@ section {
     color: var(--main-color);
 }
 
-#menu-icon {
-    font-size: 3.6rem;
-    color: var(--text-color);
-    display: none;
-}
+
 
 .home {
     display: flex;
@@ -578,6 +574,9 @@ span {
 
 /* BREAKPOINT */
 
+#menu-icon, .close-menu{
+    display: none;
+}
 
 @media (max-width: 1200px) {
     html {
@@ -612,11 +611,7 @@ span {
 }
 
 @media(max-width: 768px) {
-    #menu-icon {
-        display: none;
-        background-color: transparent;
-
-    }
+    
 
     nav .navbar a {
         position: absolute;
@@ -669,7 +664,7 @@ span {
     }
 
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .home-img img {
@@ -706,16 +701,91 @@ span {
     }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
     html {
-        font-size: 50%
+        font-size: 50%;
     }
 
     .contact form .input-box input {
         width: 100%;
+    }
 
+    .navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #333;
+        z-index: 9999;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar.active {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        color: #ccc;
+    }
+
+    .logo {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        margin: 20px;
+    }
+
+    #menu-icon
+     {
+        display: block;
+        font-size: 3rem;
+        color: #e4dede;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #close-icon {
+        display:none;
+    }
+    .close-menu{
+        cursor: pointer;
+    }
+   #projetos .projetos{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+    #projetos img{
+        width: 150%;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    .carousel-control-next{
+        display: none;
+    }
+    .carousel-control-prev{
+        display: none;
     }
 }
+
 
 @media(max-width: 365px) {
     .home-img img {
