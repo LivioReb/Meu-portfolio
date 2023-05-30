@@ -33,7 +33,7 @@ function nextImage(){
 
 function runTyped() {
   const typed = new Typed('.multiple-text', {
-    strings: ['DevFrontEnd', 'YouTuber', 'Blogger'],
+    strings: ['DevFrontEnd', 'Estudante de ADS'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
