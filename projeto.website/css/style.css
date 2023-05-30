@@ -18,7 +18,10 @@ footer{
     padding: 54px 0;
    
 }
-
+.container h2{
+    font-size: 30px;
+    color: #fff;
+}
 h3{
     font-size: 50px;
 }

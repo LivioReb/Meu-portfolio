@@ -78,6 +78,7 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 
 }
 
@@ -93,12 +94,14 @@ section {
     color: var(--text-color);
     margin-left: 4rem;
     transition: 0.3s;
+    text-decoration: none;
 }
 
 .navbar a:hover,
 .navbar a .active {
     color: var(--main-color);
 }
+
 
 .navbar .close-button {
     display: none;
@@ -164,6 +167,9 @@ span {
     animation-timing-function: cubic-bezier(0.1, 0, 0.2, 0.1);
 }
 
+.services-box{
+    height: 400px;
+}
 /* END EFEITO NEON CLASSES PRESENTES */
 
 .neon-text {
@@ -287,14 +293,15 @@ span {
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
+    font-size: 4rem;
 }
 
 .about-content h3 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
 }
 
 .about-content p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: 2rem 0 3rem;
 
 }
@@ -343,54 +350,22 @@ span {
     margin: 1rem 0 3rem;
 }
 
-.portfolio {
+.projetos {
     background: var(--second-bg-color);
 }
 
-.portfolio h2 {
+.projetos h2 {
     margin-bottom: 4rem;
 }
 
-.portfolio-container {
+.projetos-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
 
-.portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    animation: floatImage2 4s ease-in-out infinite;
-}
 
-.portfolio-box img {
-    width: 100%;
-    transition: .5s ease;
-    animation: floatImage2 4s ease-in-out infinite;
-}
-@keyframes floatImage2 {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-1.4rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.portfolio-box img {
-    max-width: 100%;
-    height: auto;
-}
 
 @media screen and (max-width: 768px) {
     .portfolio-container {
@@ -418,26 +393,26 @@ span {
     transition: .8s ease;
 }
 
-.portfolio-box:hover .portfolio1-layer {
+.projetos-box:hover .portfolio1-layer {
     transform: translateY(0);
 
 }
 
-.portfolio1-layer h4 {
+.projetos-layer h4 {
     font-size: 3rem;
 }
 
-.portfolio1-layer p {
+.projetos-layer p {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
 }
 
-.portfolio1-layer a i {
+.projetos-layer a i {
     font-size: 3rem;
     color: white;
 }
 
-.portfolio1-layer a {
+.projetos-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -447,11 +422,87 @@ span {
     border-radius: 50%;
 }
 
-.portfolio1-layer a i {
+.projetos-layer a i {
     font-size: 2rem;
     color: var(--second-bg-color)
 }
 
+/* slideShowProjetos */
+#carouselExampleCaptions{
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+#carouselExampleCaptions img{
+    border-radius: 20px;
+}
+.carousel-inner i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 1s ease;
+    font-size: 2.5rem;
+}
+
+
+.carousel-caption i:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.carousel-inner h5{
+    font-size: 3rem;
+    color: var(--text-color);
+}
+.carousel-inner p{
+    font-size: 2rem;
+    color: var(--text-color);
+} 
+.carousel-caption{
+    margin-bottom: 35px;
+}
+
+.carousel-item.slide-in {
+    animation: slide-in 1s ease-in-out forwards;
+  }
+  
+  .carousel-item.slide-out {
+    animation: slide-out 1s ease-in-out forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+/* fim slideShowProjetos */
 .contact .h2 {
     margin-bottom: 3rem;
 }

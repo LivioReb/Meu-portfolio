@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortfolioAdvanced</title>
-
+    <!-- LINK BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- BOX ICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- END BOX ICONS -->
@@ -137,86 +138,111 @@
     </section>
     <!-- EDN SEÇÃO DE SERVICOS -->
     <!-- SECAO PORTFOLIO -->
-    <section class="portfolio" id="projetos">
+    <section class="projetos" id="projetos">
         <h2 class="heading">Latest <span>Project</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="6.jpg" alt="">
-                <div class="portfolio1-layer">
-                    <h4>Web Desig</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="clientefrela.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Clinica de estética</h5>
+                  <p>Proejto feito em  HMTL, CSS e JavaScript, para uma clinica de estética avançada.</p>
+                  <a href="/clientefreela/index.html"><i class='bx bx-link-external'></i></a>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="website.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Projeto de treinamento</h5>
+                  <p>Projeto feito em HTML, CSS e JavaScript, com intuito de praticar a criaçao de sites</p>
+                  <a href="/projeto.website/index.html"><i class='bx bx-link-external'></i></a>
 
                 </div>
-            </div>
-            <!-- BOX 2 -->
-            <div class="portfolio-box">
-                <img src="1.jpg" alt="">
-                <div class="portfolio1-layer">
-                    <h4>Web Desig</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+              </div>
+              <div class="carousel-item">
+                <img src="card3d.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Projeto Cards 3D</h5>
+                  <p>Projeto feito em JavaScript</p>
+                  <a href="/projeto.website/"><i class='bx bx-link-external'></i></a>
 
                 </div>
+              </div>
             </div>
-            <!-- BOX 3 -->
-            <div class="portfolio-box">
-                <img src="2.jpg" alt="">
-                <div class="portfolio1-layer">
-                    <h4>Web Desig</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-            <!-- BOX 4-->
-            <div class="portfolio-box">
-                <img src="3.jpg" alt="">
-                <div class="portfolio1-layer">
-                    <h4>Web Desig</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-            <!-- BOX 5 -->
-            <div class="portfolio-box">
-                <img src="4.jpg" alt="">
-                <div class="portfolio1-layer">
-                    <h4>Web Desig</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-            <!-- BOX 6 -->
-            <div class="portfolio-box">
-                <img src="5.jpg" alt="">
-                <div class="portfolio1-layer">
-                    <h4>Web Desig</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, esse?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END SECAO PORFOLIO -->
-    <!-- SECAO CONTATO -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              // Obtém a referência para o carrossel
+              var carousel = document.getElementById("carouselExampleCaptions");
+          
+              // Define o intervalo para a passagem automática de slides
+              var interval = 8000; // 5 segundos
+          
+              // Define o tempo de exibição da imagem antes de desaparecer
+              var imageDisplayTime = 3000; // 3 segundos
+          
+              // Inicializa o carrossel do Bootstrap com as opções de transição suave
+              var carouselInstance = new bootstrap.Carousel(carousel, {
+                interval: interval, // Define o intervalo entre os slides
+                ride: "carousel", // Habilita a funcionalidade de carrossel
+                pause: "hover" // Pausa a passagem automática ao passar o mouse sobre o carrossel
+              });
+          
+              // Adiciona classes CSS para a transição de slide personalizada
+              carousel.addEventListener("slide.bs.carousel", function(event) {
+                var currentSlide = event.from;
+                var nextSlide = event.to;
+          
+                // Remove as classes de animação das imagens do slide atual
+                carousel.querySelectorAll(".carousel-item").forEach(function(item) {
+                  item.classList.remove("slide-in", "slide-out");
+                });
+          
+                // Adiciona as classes de animação às imagens do próximo slide
+                var nextSlideItem = carousel.querySelector(".carousel-item:nth-child(" + (nextSlide + 1) + ")");
+                nextSlideItem.classList.add("slide-in");
+          
+                // Define o tempo para remover a classe do slide atual
+                setTimeout(function() {
+                  var currentSlideItem = carousel.querySelector(".carousel-item:nth-child(" + (currentSlide + 1) + ")");
+                  currentSlideItem.classList.remove("slide-in");
+                  currentSlideItem.classList.add("slide-out");
+                }, imageDisplayTime);
+              });
+            });
+          </script>   
+    </section> 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
+        <form action="https://formsubmit.co/liviormr@hotmail.com" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Email Address">
+                <input type="text" placeholder="Nome e Sobrenome" required>
+                <input type="text" placeholder="Email"required>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Mobile NUmber">
-                <input type="text" placeholder="Email Subject">
+                <input type="text" placeholder="Numero de celular"required>
+                <input type="text" placeholder="Email reserva">
             </div>
-            <textarea name="" id="" cols="30" rows="10">Your Message</textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <input type="submit" value="Enviar" class="btn">
+            <input type="hidden" name="_subject" value="Novo Contato!">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
 
         </form>
     </section>
@@ -280,7 +306,9 @@
 
     <script src="script.js"></script>
 
-
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ 
 </body>
 
 </html>

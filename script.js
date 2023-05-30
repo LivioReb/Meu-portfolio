@@ -7,7 +7,7 @@ window.onload = function() {
   });
 
   ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-  ScrollReveal().reveal('.home-img, .services-container, .portifolio-box, .contact form, .input-box', { origin: 'bottom' });
+  ScrollReveal().reveal('.home-img, .services-container, .portifolio-box, .contact form, .input-box, .carousel', { origin: 'bottom' });
   ScrollReveal().reveal('.home-content h1, .about-img, .services-container', { origin: 'left' });
   ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiofreq&Ultracav&JatodePlasma</title>
+    <link rel="icon" href="/icon2.ico">
+
+    <link rel="stylesheet" href="styleninvs.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <div class="img-navbar">
+                <a href="index.html"><img src="/clientefreela/logos/logo1.png" alt="Logomarca"></a>
+            </div>
+            <div class="navlinks">
+                <a class="scroll" href="#sobre">Radiofrequencia</a>
+                <a class="scroll" href="#parallax2">Ultracavitação &<br>Radiofrequencia</a>
+                <a class="scroll" href="#bloco1">Benefícios</a>
+            </div>
+        </div>
+
+        <div class="home1">
+            <h1>Radiofrequência, Ultracavitação e Jato de Plasma</h1>
+        </div>
+        <script>
+            const scrollLinks = document.querySelectorAll('.navlinks a');
+
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const targetPosition = targetElement.offsetTop;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 2500;
+                    let start = null;
+
+                    window.requestAnimationFrame(step);
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                        if (progress < duration) window.requestAnimationFrame(step);
+                    }
+                });
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            }
+        </script>
+    </header>
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h1>Radiofrequência: Estimulando a Produção de Colágeno</h1>
+            <h2>Como a Radiofrequência Funciona?</h2>
+            <p>AA Radiofrequência é um tratamento que utiliza ondas eletromagnéticas para aquecer as camadas mais
+                profundas da pele. Isso estimula a produção de colágeno, resultando em uma pele mais firme e com menos
+                rugas. Além disso, a Radiofrequência também auxilia na redução da celulite e melhora a aparência geral
+                da pele.</p>
+        </div>
+    </section>
+    <section id="parallax1" class="parallax parallax1">
+        <h1>Ultracavitação: Quebrando as Células de Gordura</h1>
+    </section>
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h2>Como a Ultracavitação Funciona?</h2>
+            <p>A Ultracavitação é um tratamento estético que utiliza ondas ultrassônicas de baixa frequência para
+                quebrar as células de gordura localizada. Essas ondas agem seletivamente nas células adiposas, causando
+                sua ruptura e posterior eliminação pelo organismo. A Ultracavitação é eficaz na redução de medidas e
+                remodelação corporal.<br>
+            </p>
+        </div>
+    </section>
+    <section id="parallax2" class="parallax parallax2">
+        <h1>Jato de Plasma: Rejuvenescimento e Tratamento de Manchas</h1>
+    </section>
+    <section id="utilidade" class="txbot">
+        <div class="txbotox1">
+
+            <h2>Como o Jato de Plasma Funciona?</h2>
+            <p> O Jato de Plasma é uma técnica que utiliza descargas elétricas para estimular a produção de colágeno e
+                promover o rejuvenescimento da pele. Além disso, o Jato de Plasma também é eficaz no tratamento de
+                manchas, rugas finas e cicatrizes. Essa técnica permite um tratamento preciso e seguro, sem causar danos
+                ao tecido circundante.</p>
+        </div>
+    </section>
+    <section id="bloco1">
+        <div class="container bloco">
+            <div class="img-container">
+                <img src="/clientefreela/img-radiofrequltrcav/jatodeplasm1.png" alt="">
+            </div>
+            <div class="txt-container card1">
+                <h2>Benefícios da Radiofrequência, Ultracavitação e Jato de Plasma</h2>
+                <p>Os tratamentos de Radiofrequência, Ultracavitação e Jato de Plasma oferecem uma variedade de
+                    benefícios, como:
+                </p>
+                <ul>
+                    <li>Estimulação da produção de colágeno</li>
+                    <li>Redução de rugas e linhas de expressão</li>
+                    <li>Redução de gordura localizada</li>
+                    <li>Remodelação corporal</li>
+                    <li>Rejuvenescimento facial</li>
+                    <li>Tratamento de manchas e cicatrizes</li>
+                  </ul>
+            </div>
+        </div>
+    </section>
+   
+    <!-- SCROLL TOP -->
+    <script>
+        function scrollToTop(event) {
+            event.preventDefault();
+
+            const startPosition = window.pageYOffset;
+            const distance = -startPosition;
+            const duration = 1000;
+            let start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const ease = easeInOutCubic(progress, startPosition, distance, duration);
+                window.scrollTo(0, ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        }
+
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+    </script>
+
+
+    <!-- SCROL TOP -->
+
+    <footer class="footer" id="footer">
+        <div class="footer-iconTop">
+            <a href="#home" onclick="scrollToTop(event)"><i class='bx bx-up-arrow-circle'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/drjoaojunqueira?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyrigth &copy; 2023 by João Pedro Junqueira, Biomédico Esteta | LivioFrontDeveloper | All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script3.js"></script>
+</body>
+
+</html>

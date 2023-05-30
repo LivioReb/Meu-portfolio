@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipos Papada e Enzimática</title>
+    <link rel="stylesheet" href="styllipo.css">
+    <link rel="icon" href="/icon2.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <div class="img-navbar">
+                <a href="index.html"><img src="/clientefreela/logos/logo1.png" alt="Logomarca"></a>
+            </div>
+            <div class="navlinks">
+                <a class="scroll" href="#sobre">Lipo de Papada e Enzimática</a>
+                <a class="scroll" href="#utilidade">Como é feito</a>
+                <a class="scroll" href="#bloco1">Para que Serve</a>
+            </div>
+        </div>
+
+        <div class="home1">
+            <div>
+                <h1>Lipo de Papada e Lipo Enzimática </h1>
+
+
+            </div>
+            <script>
+                const scrollLinks = document.querySelectorAll('.navlinks a');
+
+                scrollLinks.forEach(link => {
+                    link.addEventListener('click', e => {
+                        e.preventDefault();
+
+                        const targetId = link.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        const targetPosition = targetElement.offsetTop;
+                        const startPosition = window.pageYOffset;
+                        const distance = targetPosition - startPosition;
+                        const duration = 2000;
+                        let start = null;
+
+                        window.requestAnimationFrame(step);
+
+                        function step(timestamp) {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+                            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                            if (progress < duration) window.requestAnimationFrame(step);
+                        }
+                    });
+                });
+
+                function easeInOutCubic(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t * t + b;
+                    t -= 2;
+                    return c / 2 * (t * t * t + 2) + b;
+                }
+            </script>
+    </header>
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h2>O que é a Lipo de Papada e a Lipo Enzimática?</h2>
+            <p>A lipo de papada e a lipo enzimática são procedimentos estéticos que visam eliminar o acúmulo de gordura
+                na região do pescoço e papada. Esses tratamentos são realizados por profissionais especializados e
+                proporcionam resultados eficazes na redução da papada e definição do contorno facial.</p>
+        </div>
+    </section>
+
+    <section class="parallax parallax1">
+        <h1>Lipo de Papada: Eliminando o Excesso de Gordura</h1>
+    </section>
+
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h2> Como o Microagulhamento Funciona?</h2>
+            <p> Os bioestimuladores de colágeno funcionam estimulando a produção natural de colágeno na pele. </p>
+            <p>A lipo de papada é um procedimento que consiste na remoção da gordura localizada na região do queixo e
+                pescoço. É realizado através de pequenas incisões e a aspiração da gordura é feita com cânulas
+                específicas. O objetivo é definir o contorno do pescoço, reduzir a papada e proporcionar uma aparência
+                mais harmoniosa ao rosto.</p>
+        </div>
+    </section>
+
+    <section class="parallax parallax2">
+        <h1>Lipo Enzimática: Quebrando as Células de Gordura</h1>
+    </section>
+
+    <section id="utilidade" class="txbot">
+        <div class="txbotox1">
+            <h2>Como a Lipo Enzimática Funciona?</h2>
+            <p>A lipo enzimática é um procedimento não cirúrgico que utiliza enzimas para quebrar as células de gordura
+                na região da papada. A aplicação da enzima é feita através de injeções diretamente na área a ser
+                tratada. A enzima dissolverá a gordura, que será eliminada naturalmente pelo organismo ao longo do
+                tempo, resultando em uma redução da papada e melhora do contorno facial.</p>
+        </div>
+        <!-- ======================================================================== -->
+        <!--  -->
+
+        <!-- ======================================================================== -->
+
+    </section>
+    <section id="bloco1">
+        <div class="container bloco">
+            <div class="img-container img1">
+                <img src="/clientefreela/img-lipos/lipoenz2.png" alt="">
+            </div>
+            <div class="txt-container card1">
+                <h2> Benefícios da Lipo de Papada e Lipo Enzimática</h2>
+                <p>Tanto a lipo de papada quanto a lipo enzimática oferecem benefícios, tais como:</p>
+                <ul>
+                    <li>Redução da gordura localizada na região da papada</li>
+                    <li>Melhora do contorno do pescoço e do rosto</li>
+                    <li>Aparência mais jovem e harmoniosa</li>
+                    <li>Procedimentos minimamente invasivos</li>
+                    <li>Resultados duradouros</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="bloco2">
+        <div class="container bloco">
+            <div class="txt-container card2">
+                <h2> Procedimentos Seguros e Recuperação</h2>
+                <p>Tanto a lipo de papada quanto a lipo enzimática são procedimentos seguros, mas é importante seguir as
+                    recomendações do profissional para garantir uma recuperação adequada. Alguns pontos a serem
+                    considerados são:</p>
+                <ul>
+                    <li>Realizar o procedimento com um profissional qualificado e experiente</li>
+                    <li>Seguir todas as orientações pré e pós-operatórias</li>
+                    <li>Evitar exposição solar intensa durante o período de recuperação</li>
+                    <li>Utilizar produtos recomendados para cuidar da pele após o procedimento</li>
+                    <li>Observar possíveis sinais de complicações e entrar em contato com o médico responsável, se
+                        necessário</li>
+                </ul>
+                
+            </div>
+            <div class="img-container img2">
+                <img src="/clientefreela/img-lipos/recuperaclip.png" alt="">
+            </div>
+
+        </div>
+    </section>
+    <!-- SCROLL TOP -->
+    <script>
+        function scrollToTop(event) {
+            event.preventDefault();
+
+            const startPosition = window.pageYOffset;
+            const distance = -startPosition;
+            const duration = 1000;
+            let start = null;
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const ease = easeInOutCubic(progress, startPosition, distance, duration);
+                window.scrollTo(0, ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        }
+
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+    </script>
+
+
+    <!-- SCROL TOP -->
+
+    <footer class="footer" id="footer">
+        <div class="footer-iconTop">
+            <a href="#home" onclick="scrollToTop(event)"><i class='bx bx-up-arrow-circle'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/drjoaojunqueira?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyrigth &copy; 2023 by João Pedro Junqueira, Biomédico Esteta | LivioFrontDeveloper | All Rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>

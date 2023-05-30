@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioestimulador de Colágeno</title>
+    <link rel="stylesheet" href="stylecolag.css">
+    <link rel="icon" href="/icon2.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <div class="img-navbar">
+                <a href="index.html"><img src="/clientefreela/logos/logo1.png" alt="Logomarca"></a> 
+            </div>
+            <div class="navlinks-colageno">
+               
+                <a class="scroll" href="#bioestimulador">Bioestimulador de Colágeno</a>
+                <a class="scroll" href="#skinbooster">Skinbooster</a>
+                <a class="scroll" href="#bloco1">Tempo de Ação</a>
+            </div>
+        </div>
+        
+        <div class="home1">
+            <div>
+<h1>Bioestimulador de Colágeno e Skinbooster </h1>
+<h2>Melhore a aparência da sua pele</h2>
+
+        </div>
+        <script>
+        const scrollLinks = document.querySelectorAll('.navlinks-colageno a');
+
+scrollLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const targetPosition = targetElement.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1000;
+        let start = null;
+
+        window.requestAnimationFrame(step);
+
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            if (progress < duration) window.requestAnimationFrame(step);
+        }
+    });
+});
+
+function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t + b;
+    t -= 2;
+    return c / 2 * (t * t * t + 2) + b;
+}
+</script>
+    </header>
+    <section id="bioestimulador" class="txbot">
+        <div class="txbotox">
+            <h2>O que é um bioestimulador de colágeno e um skinbooster?</h2>
+            <p>Um bioestimulador de colágeno é uma substância injetável que estimula a produção de colágeno natural da pele, ajudando a melhorar a textura, firmeza e aparência geral da pele. Já o skinbooster é um tipo de preenchedor injetável que ajuda a hidratar profundamente a pele, melhorando sua textura e brilho.</p>
+        </div>
+    </section>
+    
+    <section class="parallax parallax1">
+        <h1>Como funciona um bioestimulador de colágeno?</h1>
+    </section>
+    
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h2> Substâncias utilizadas nos bioestimuladores de colágeno</h2>
+            <p> Os bioestimuladores de colágeno funcionam estimulando a produção natural de colágeno na pele. </p>
+            <p>Eles contêm substâncias como ácido polilático, hidroxiapatita de cálcio e policaprolactona que estimulam a produção de colágeno na pele.</p>
+        </div>
+    </section>
+    
+    <section id="skinbooster" class="parallax parallax2">
+        <h1>Como funciona um skinbooster?</h1>
+    </section>
+    
+    <section id="utilidade" class="txbot">
+        <div class="txbotox1">
+            <h2>Ácido hialurônico em skinboosters</h2>
+            <p>Os skinboosters funcionam hidratando profundamente a pele. Eles contêm ácido hialurônico de baixa concentração que é injetado na pele para ajudar a reter a umidade e melhorar a textura e a aparência da pele.</p>
+        </div>
+        <!-- ======================================================================== -->
+        
+
+        <!-- ======================================================================== -->
+        
+    </section>
+    <section id="bloco1">
+        <div class="container bloco">
+            <div class="img-container img1">
+                <img src="/clientefreela/img-botox/Tratamentos Botox/Tratamento de rugas6.png" alt="">
+            </div>
+            <div class="txt-container card1">
+                <h2> Duração do efeito de um bioestimulador de colágeno</h2>
+                <p>Os resultados de um tratamento com bioestimulador de colágeno podem durar vários meses a vários anos, dependendo do tipo de produto utilizado.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="bloco2">
+        <div class="container bloco">
+            <div class="txt-container card2">
+                <h2>Duração do efeito de um skinbooster</h2>
+                <p>Os resultados de um tratamento com skinbooster podem durar vários meses, dependendo do tipo de produto utilizado
+
+                </p>
+            </div>
+            <div class="img-container img2">
+                <img src="/clientefreela/img-colag/calendariocolag.png" alt="">
+            </div>
+
+        </div>
+    </section>
+    <section id="bloco3">
+        <div class="container bloco">
+            <div class="img-container img3">
+                <img src="/clientefreela/img-colag/tempduraconlag.png" alt="">
+            </div>
+            <div class="txt-container card3">
+                <h2>Tempo de recuperação após um tratamento com bioestimulador de colágeno e skinbooster</h2>
+                <p> O tempo de recuperação após um tratamento com bioestimulador de colágeno e skinbooster é geralmente curto, com a maioria dos pacientes podendo retomar suas atividades diárias imediatamente após o tratamento.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="bloco4">
+        <div class="container bloco">
+            <div class="txt-container card4">
+                <h2>Benefício do tratamento com bioestimulador de colágeno e skinbooster</h2>
+                <p>Um benefício adicional é a melhora da hidratação da pele. Esses procedimentos promovem uma hidratação profunda e duradoura, restaurando a barreira de hidratação natural da pele. Isso resulta em uma pele mais macia, suave, luminosa e com aparência saudável.</p>
+            </div>
+            <div class="img-container img4">
+                <img src="/clientefreela/img-colag/pelehidratcolag.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- SCROLL TOP -->
+    <script>
+        function scrollToTop(event) {
+            event.preventDefault();
+    
+            const startPosition = window.pageYOffset;
+            const distance = -startPosition;
+            const duration = 1000;
+            let start = null;
+    
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const ease = easeInOutCubic(progress, startPosition, distance, duration);
+                window.scrollTo(0, ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+    
+            window.requestAnimationFrame(step);
+        }
+    
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+    </script>
+    
+    
+    <!-- SCROL TOP -->
+
+    <footer class="footer" id="footer">
+        <div class="footer-iconTop">
+            <a href="#home" onclick="scrollToTop(event)"><i class='bx bx-up-arrow-circle'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/drjoaojunqueira?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyrigth &copy; 2023 by João Pedro Junqueira, Biomédico Esteta | LivioFrontDeveloper | All Rights reserved.</p>
+        </div>
+    </footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script2.js"></script>
+</body>
+
+</html>

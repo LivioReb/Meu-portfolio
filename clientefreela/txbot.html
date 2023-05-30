@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxina Botulínica</title>
+    <link rel="icon" href="/icon2.ico">
+
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header id="home">
+        <div class="navbar">
+            <div class="img-navbar">
+                <a href="index.html"><img src="/clientefreela/logos/logo1.png" alt="Logomarca"></a> 
+            </div>
+            <div class="navlinks">
+                <a class="scroll" href="#home">Toxina Botulínica</a>
+                <a class="scroll" href="#sobre">Como é feito</a>
+                <a class="scroll" href="#utilidade">Para que Serve</a>
+            </div>
+        </div>
+        
+        <div class="home1">
+<h1>Toxina Botulínica</h1>
+        </div>
+        <script>
+        const scrollLinks = document.querySelectorAll('.navlinks a');
+
+scrollLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const targetPosition = targetElement.offsetTop;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 2500;
+        let start = null;
+
+        window.requestAnimationFrame(step);
+
+        function step(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+            if (progress < duration) window.requestAnimationFrame(step);
+        }
+    });
+});
+
+function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t + b;
+    t -= 2;
+    return c / 2 * (t * t * t + 2) + b;
+}
+</script>
+    </header>
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h2>Introdução aos Tratamentos com Toxina Botulínica (Botox)</h2>
+            <p>Os tratamentos com toxina botulínica, popularmente conhecida como Botox, têm ganhado cada vez mais
+                destaque
+                na área da estética e da dermatologia. Essa substância, produzida a partir da bactéria Clostridium
+                botulinum, possui propriedades que permitem o relaxamento temporário dos músculos, oferecendo uma série
+                de
+                benefícios estéticos e terapêuticos.</p>
+        </div>
+    </section>
+    <section class="parallax parallax1">
+        <h1>Como é feito o Tratamento com Toxina Botulínica?</h1>
+    </section>
+    <section id="sobre" class="txbot">
+        <div class="txbotox">
+            <h2>Como é feito o Tratamento com Toxina Botulínica?</h2>
+            <p>O tratamento com toxina botulínica é realizado por meio de injeções precisas da substância em
+                determinadas
+                áreas do rosto ou do corpo. Antes de iniciar o procedimento, é fundamental que um profissional
+                qualificado,
+                como um dermatologista ou cirurgião plástico, avalie o paciente e elabore um plano personalizado de
+                tratamento. <br>
+            </p>
+            <p>
+                Durante a aplicação, o profissional utiliza agulhas finas para injetar pequenas
+                quantidades
+                de toxina botulínica diretamente nos músculos-alvo. O procedimento é geralmente rápido e praticamente
+                indolor, podendo ser realizado no consultório médico sem necessidade de internação.
+            </p>
+        </div>
+    </section>
+    <section class="parallax parallax2">
+        <h1>Para que Serve a Toxina Botulínica?</h1>
+    </section>
+    <section id="utilidade" class="txbot">
+        <div class="txbotox1">
+
+            <h2>A toxina botulínica tem diversas aplicações e finalidades, tanto estéticas quanto terapêuticas.
+            </h2>
+            <p> Abaixo, destacamos algumas das principais:</p>
+        </div>
+    </section>
+    <section id="bloco1">
+        <div class="container bloco">
+            <div class="img-container">
+                <img src="/clientefreela/img-botox/Tratamentos Botox/Tratamento de rugas6.png" alt="">
+            </div>
+            <div class="txt-container card1">
+                <h2>Redução de Rugas e Linhas de Expressão</h2>
+                <p>A toxina botulínica é amplamente utilizada para reduzir rugas e linhas de expressão que surgem com o
+                    envelhecimento. Ela atua relaxando os músculos faciais responsáveis por essas rugas, resultando em
+                    uma aparência mais suave e rejuvenescida.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="bloco2">
+        <div class="container bloco">
+            <div class="txt-container card2">
+                <h2>Tratamento de Hiperidrose</h2>
+                <p>A hiperidrose, condição caracterizada pelo suor excessivo em determinadas áreas do corpo, pode ser
+                    tratada com toxina botulínica. Ao ser injetada nas glândulas sudoríparas, a substância bloqueia
+                    temporariamente a liberação de suor, proporcionando um alívio significativo aos pacientes.
+                </p>
+            </div>
+            <div class="img-container">
+                <img src="/clientefreela/img-botox/Tratamentos Botox/TratamentoHiperhidrose4.png" alt="">
+            </div>
+
+        </div>
+    </section>
+    <section id="bloco3">
+        <div class="container bloco">
+            <div class="img-container">
+                <img src="/clientefreela/img-botox/Tratamentos Botox/HarmonizFacial2.png" alt="">
+            </div>
+            <div class="txt-container card3">
+                <h2>Correção de Assimetrias Faciais</h2>
+                <p>A toxina botulínica também pode ser utilizada para corrigir assimetrias faciais, como sobrancelhas
+                    desiguais ou sorriso gengival. Ao relaxar os músculos em áreas específicas, é possível obter um
+                    equilíbrio estético e uma aparência mais harmônica.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="bloco4">
+        <div class="container bloco">
+            <div class="txt-container card4">
+                <h2>Tratamento de Bruxismo e Disfunções Temporomandibulares (DTM)</h2>
+                <p>A toxina botulínica pode ser uma opção de tratamento para pessoas que sofrem de bruxismo (ranger dos
+                    dentes) ou disfunções temporomandibulares. Ao relaxar os músculos da mandíbula, a substância ajuda a
+                    reduzir os sintomas associados a essas condições, como dor e tensão muscular.</p>
+            </div>
+            <div class="img-container">
+                <img src="/clientefreela/img-botox/Tratamentos Botox/DTM2.png" alt="">
+            </div>
+        </div>
+        
+    </section>
+     <!-- SCROLL TOP -->
+     <script>
+        function scrollToTop(event) {
+            event.preventDefault();
+    
+            const startPosition = window.pageYOffset;
+            const distance = -startPosition;
+            const duration = 1000;
+            let start = null;
+    
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const ease = easeInOutCubic(progress, startPosition, distance, duration);
+                window.scrollTo(0, ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+    
+            window.requestAnimationFrame(step);
+        }
+    
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+    </script>
+    
+    
+    <!-- SCROL TOP -->
+
+    <footer class="footer" id="footer">
+        <div class="footer-iconTop">
+            <a href="#home" onclick="scrollToTop(event)"><i class='bx bx-up-arrow-circle'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/drjoaojunqueira?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyrigth &copy; 2023 by João Pedro Junqueira, Biomédico Esteta | LivioFrontDeveloper | All Rights reserved.</p>
+        </div>
+    </footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script2.js"></script>
+</body>
+
+</html>

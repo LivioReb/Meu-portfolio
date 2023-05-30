@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jp.Estética</title>
+    <link rel="icon" href="/icon2.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body onload="clicarAutomaticamente()">
+    <header class="header">
+        <div class="img-navbar1">
+          <div class="img-navbar">
+            <a href="index.html"><img src="/clientefreela/logos/logo1.png" alt="Logomarca1"></a>
+          </div>
+          <div class="logo-mobile">
+            <a href="index.html"><img src="/clientefreela/index-img-mobile/logo-mobile.png" alt="Logomarca"></a>
+          </div>
+        </div>
+        <i class="bx bx-menu" id="menu-icon" onclick="toggleMenu()"></i>
+        <i class="bx bx-x-circle" id="close-icon" onclick="toggleMenu()"></i>
+        <nav class="navbar" id="navbar">
+          <div class="active">
+             <i class="bx bx-x-circle" id="close-icon" onclick="toggleMenu()"></i>
+            <a href="#home" class="active scroll">Home</a>
+            <a href="#sobre" class="scroll">Sobre</a>
+            <a href="#servicos" class="scroll">Serviços</a>
+            <a href="#abordagem" class="scroll">Abordagem</a>
+            <a href="#contato" class="scroll">Contato</a>
+            <a href="https://livioreb.github.io/Meu-portfolio/"><i class='bx bxl-github'></i> </a>
+          </div>
+        </nav>
+        
+
+        <script>
+            const scrollLinks = document.querySelectorAll('.scroll');
+
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetPosition = document.querySelector(targetId).offsetTop;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 1000;
+                    let start = null;
+
+                    window.requestAnimationFrame(step);
+
+                    function step(timestamp) {
+                        if (!start) start = timestamp;
+                        const progress = timestamp - start;
+                        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                        if (progress < duration) window.requestAnimationFrame(step);
+                    }
+                });
+            });
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+
+
+            };
+        </script>
+    </header>
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home-logo-mobile">
+                <img src="/clientefreela/index-img-mobile/logmobile1.png" alt="">
+            </div>
+                
+          <div class="home-text">
+            <h2>Bem-vindo ao meu mundo de beleza e bem-estar!</h2>
+            <h1> Sou João Junqueira, um profissional esteta apaixonado por beleza e bem-estar.</h1>
+            <p>Meu objetivo é ajudar meus clientes a se sentirem confiantes e radiantes em sua própria pele, fornecendo tratamentos personalizados e soluções de cuidados com a pele eficazes.</p>
+          </div>
+          <div class="img-home">
+            <img src="/clientefreela/jpSite/jp111.jpeg" alt="Imagem do home">
+          </div>
+        </div>
+      </section>
+      <section class="sobre" id="sobre">
+        <div class="sobre-container">
+          <div class="img-sobre">
+            <img src="/clientefreela/jpSite/jp22.jpeg" alt="imagem-sobre mim">
+          </div>
+          <div class="sobre-text">
+            <h1>Sobre <span>mim</span> </h1>
+            <h2>Eu sou um biomedico esteta, certificado com experiência na indústria da estética.</h2>
+            <h2>Minha abordagem é holística, abrangendo não apenas tratamentos de beleza, mas também um estilo de vida saudável e equilibrado.</h2>
+          </div>
+        </div>
+      </section>
+      
+
+    <section class="servicos" id="servicos">
+        <div class="servicos-container">
+            <h2>Serviços</h2>
+            <p>Ofereço uma variedade de serviços de estética para ajudar meus clientes a alcançarem sua melhor versão.
+                Alguns dos
+                serviços que ofereço incluem:</p>
+        </div>
+        <div class="container-box">
+            <div class="servicos-box">
+                <h3>Tratamentos com Toxina Botulínica (Botox):</h3>
+                <p>Toxina botulínica (botox)</p>
+                <a href="txbot.html"><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Estimulação de colágeno:</h3>
+                <p>Bioestimulador de colágeno</p>
+                <p>Skinbooster</p>
+                <a href="colagen.html"><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box">
+                <h3>Tratamentos para a pele:</h3>
+                <p>Microagulhamento</p>
+                <p>Peeling químico</p>
+                <a href="micrpel.html"><i class='bx bx-link-external'></i></a>
+            </div>
+            <div class="servicos-box caixa4">
+                <h3>Procedimentos específicos para o rosto e pescoço:</h3>
+                <p>Lipo de papada</p>
+                <p>Lipo enzimática</p>
+                <a href="lopoenz.html"><i class='bx bx-link-external'></i></a>
+            </div>
+            
+            
+            <div class="servicos-box caixa5">
+                <h3>Tratamentos estéticos não invasivos:</h3>
+                <p>Radiofrequência <br>
+                Ultracavitação <br>
+                Jato de plasma</p>
+                <a href="ninvasvs.html"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+    </section>
+    <!--================================================================================================================  -->
+    <section id="abordagem">
+
+        <div class="slide primeiro" id="slide-primeiro">
+            <div class="img">
+                <img src="/clientefreela/jpSite/Preenchimento de bigode chinês-formatado500width.jpeg" alt="imagem abordagem 1">
+            </div>
+            <div class="txt slid1">
+                <h1>Minha Abordagem</h1>
+                <h2>Minha abordagem é baseada em técnicas modernas de cuidados com a pele, combinadas com produtos de
+                    alta qualidade para garantir que meus clientes obtenham os melhores resultados possíveis.</h2>
+                <p>É com grande satisfação que lhe apresentamos a abordagem do nosso esteticista, dedicado a
+                    oferecer-lhe um tratamento personalizado e de qualidade para cuidar da sua beleza e bem-estar.</p>
+            </div>
+        </div>
+        <div class="slide segundo">
+            <div class="img">
+                <img src="/clientefreela/jpSite/Bioestimulador colágeno no pescoço-formatado-500px-width.jpeg" alt="imagem abordagem 2">
+            </div>
+            <div class="txt">
+                <h2>Sobre Mim</h2>
+                <p>Sou um profissional altamente qualificado e possuo uma vasta experiência no campo da estética.
+                    Trabalho de forma profissional, buscando entender suas necessidades individuais, objetivos e
+                    preocupações estéticas.</p>
+                <p>Ao agendar uma sessão comigo, você será recebido(a) em um ambiente acolhedor e confortável, criado
+                    para proporcionar uma experiência relaxante e agradável. Cada consulta minha ou tratamento se inicia
+                    com uma conversa aberta, ouvindo atentamente suas expectativas e preocupações específicas.</p>
+
+            </div>
+        </div>
+        <div class="slide terceiro">
+            <div class="img"> 
+                <img src="/clientefreela/jpSite/jp com moça-formatado-width-500px.jpeg" alt="imagem abordagem 3">
+            </div>
+            <div class="txt">
+                <h2>Tratamentos Personalizados</h2>
+                <p>Com base nessa compreensão, elaboro um plano de tratamento personalizado, selecionando cuidadosamente
+                    os procedimentos estéticos mais adequados para atender às suas necessidades. Seja para
+                    rejuvenescimento facial, tratamentos corporais, cuidados com a pele ou outros serviços estéticos,
+                    nosso esteticista utiliza técnicas avançadas e produtos de alta qualidade para garantir os melhores
+                    resultados.</p>
+                <p>Além disso, nosso esteticista valoriza a educação contínua e está sempre atualizado(a) com as últimas
+                    tendências e avanços na área da estética. Dessa forma, você pode ter a certeza de que está recebendo
+                    os melhores cuidados e os tratamentos mais inovadores disponíveis.</p>
+
+            </div>
+        </div> 
+        <div class="slide quarto">
+            <div class="img">
+                <img src="/clientefreela/jpSite/jp111.jpeg" alt="imagem abordagem 3">
+            </div>
+            <div class="txt">
+                <h2>Atendimento Personalizado</h2>
+                <p>Acreditamos que cada cliente é único e merece atenção personalizada. Nosso esteticista está
+                    comprometido(a) em fornecer um atendimento individualizado, respeitando suas preferências e
+                    necessidades específicas. Sua satisfação e conforto são nossas prioridades.</p>
+                <h3>Estamos ansiosos para recebê-lo(a) em nosso espaço e proporcionar-lhe uma experiência estética
+                    excepcional, focada em resultados e bem-estar.</h3>
+
+            </div>
+        </div>
+    </section>
+    <section id="buttons">
+        <div class="botao">
+            <button id="btn1" onclick="alterarMargem(0);mostrarSlide(0);"></button>
+            <button id="btn2" onclick="alterarMargem(-25);mostrarSlide(1);"></button>
+            <button id="btn3" onclick="alterarMargem(-50);mostrarSlide(2);"></button>
+            <button id="btn4" onclick="alterarMargem(-75);mostrarSlide(3);"></button>
+        </div>
+
+    </section>
+    </section>
+    <!--================================================================================================================  -->
+
+    <section class="contato" id="contato">
+        <div class="contato-container"></div>
+        <h2 class="heading">Meu <span>Contato</span></h2>
+        <div class="bloco-contato">        
+            <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Nome completo">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Numero para contato">
+                <input type="text" placeholder="E-mail reserva">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+            <input type="submit" value="Envie sua mensagem" class="btn ">
+        </form>
+        <div class="loc">
+            <a href=""><i class='bx bx-down-arrow-circle'></i></a>
+       </div>
+    </div>
+    </section>
+    <!-- SCROLL TOP -->
+    <script>
+        function scrollToTop(event) {
+            event.preventDefault();
+    
+            const startPosition = window.pageYOffset;
+            const distance = -startPosition;
+            const duration = 1000;
+            let start = null;
+    
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                const ease = easeInOutCubic(progress, startPosition, distance, duration);
+                window.scrollTo(0, ease);
+                if (progress < duration) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+    
+            window.requestAnimationFrame(step);
+        }
+    
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+    </script>
+    
+    
+    <!-- SCROL TOP -->
+    <footer class="footer" id="footer">
+        <div class="footer-iconTop">
+            <a href="#home" onclick="scrollToTop(event)"><i class='bx bx-up-arrow-circle'></i></a>    
+            <a href="localizaçao.html"><i class='bx bx-world'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://instagram.com/drjoaojunqueira?igshid=MzRlODBiNWFlZA=="><i class='bx bxl-instagram'></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Copyrigth &copy; 2023 by João Pedro Junqueira, Biomédico Esteta | LivioFrontDeveloper | All Rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+
+   
+</body>
+
+</html>
