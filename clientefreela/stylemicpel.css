@@ -38,7 +38,7 @@ header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/clientefreela/img-micrpell/homepellinmicro.png");
+    background-image: url("/img-micrpell/homepellinmicro.png");
         height: 100vh;
 display: flex;
 flex-direction: column;
@@ -153,13 +153,13 @@ section#palax-extra{
 }
 
 .parallax1{
-    background-image: url("/clientefreela/img-micrpell/microagulh.png");
+    background-image: url("/img-micrpell/microagulh.png");
 }
 
 
 
 .parallax2{
-    background-image: url("/clientefreela/img-micrpell/pelling.png");
+    background-image: url("/img-micrpell/pelling.png");
 }
 
 .txbot{

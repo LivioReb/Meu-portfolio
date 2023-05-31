@@ -38,7 +38,7 @@ header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/clientefreela/img-radiofrequltrcav/radiofreq1..png");
+    background-image: url("/img-radiofrequltrcav/radiofreq1..png");
         height: 100vh;
 display: flex;
 flex-direction: column;
@@ -117,13 +117,13 @@ section#sobre,#utilidade{
 }
 
 .parallax1{
-    background-image: url("/clientefreela/img-radiofrequltrcav/radiofreq2.png");
+    background-image: url("/img-radiofrequltrcav/radiofreq2.png");
 }
 
 
 
 .parallax2{
-    background-image: url("/clientefreela/img-radiofrequltrcav/ultracav.png");
+    background-image: url("/img-radiofrequltrcav/ultracav.png");
 }
 
 

@@ -38,7 +38,7 @@ header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/clientefreela/img-botox/parallax1.png");
+    background-image: url("/img-botox/parallax1.png");
         height: 100vh;
 display: flex;
 flex-direction: column;
@@ -115,20 +115,20 @@ section#sobre,#utilidade{
 }
 
 .parallax1{
-    background-image: url("/clientefreela/img-botox/parallax3.png");
+    background-image: url("/img-botox/parallax3.png");
 }
 
 
 
 .parallax2{
-    background-image: url("/clientefreela/img-botox/parallax2.png");
+    background-image: url("/img-botox/parallax2.png");
 }
 
 .parallax3{
-    background-image: url("/clientefreela/img-botox/parallax2.png");
+    background-image: url("/img-botox/parallax2.png");
 }
 .parallax4{
-    background-image: url("/clientefreela/img-botox/parallax2.png");
+    background-image: url("/img-botox/parallax2.png");
 }
 .txbot{
     background: var(--second-bg-color);

@@ -38,7 +38,7 @@ header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/clientefreela/img-colag/colag-img1.png");
+    background-image: url("/img-colag/colag-img1.png");
         height: 100vh;
 display: flex;
 flex-direction: column;
@@ -151,13 +151,13 @@ section#palax-extra{
 }
 
 .parallax1{
-    background-image: url("/clientefreela/img-colag/colag-img2.png");
+    background-image: url("/img-colag/colag-img2.png");
 }
 
 
 
 .parallax2{
-    background-image: url("/clientefreela/img-colag/colag-img3.png");
+    background-image: url("/img-colag/colag-img3.png");
 }
 
 .txbot{

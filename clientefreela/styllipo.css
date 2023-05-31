@@ -38,7 +38,7 @@ header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/clientefreela/img-lipos/liposhome.png");
+    background-image: url("/img-lipos/liposhome.png");
         height: 100vh;
 display: flex;
 flex-direction: column;
@@ -156,13 +156,13 @@ section#palax-extra{
 }
 
 .parallax1{
-    background-image: url("/clientefreela/img-lipos/lipopap.png");
+    background-image: url("/img-lipos/lipopap.png");
 }
 
 
 
 .parallax2{
-    background-image: url("/clientefreela/img-lipos/lipoenz.png");
+    background-image: url("/img-lipos/lipoenz.png");
 }
 
 .txbot{
